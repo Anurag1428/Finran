@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, MapPin, Building, DollarSign } from "lucide-react";
+import { ArrowRight, MapPin } from "lucide-react";
 
 export default function LiveOpportunities() {
   return (
@@ -36,7 +36,7 @@ export default function LiveOpportunities() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="group relative lg:col-span-8 rounded-[2rem] border border-foreground/10 dark:border-white/10 bg-foreground/5 dark:bg-black/40 overflow-hidden backdrop-blur-3xl shadow-2xl p-10 md:p-12 cursor-pointer flex flex-col justify-between min-h-[450px]"
+            className="group relative lg:col-span-8 rounded-[2rem] border border-foreground/10 dark:border-white/10 bg-foreground/5 dark:bg-black/40 overflow-hidden backdrop-blur-3xl shadow-2xl p-10 md:p-12 cursor-pointer flex flex-col justify-between min-h-[500px]"
           >
             {/* Ambient inner soft green spotlight glow */}
             <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/[0.05] via-transparent to-transparent pointer-events-none" />
@@ -48,24 +48,42 @@ export default function LiveOpportunities() {
                   Featured Mandate
                 </span>
                 <span className="px-4 py-1.5 rounded-full border border-foreground/5 bg-foreground/[0.03] text-[9px] font-mono text-foreground/50 tracking-widest uppercase">
-                  Retained
+                  Retained Search
                 </span>
               </div>
               
               <div className="flex flex-col items-end text-right font-mono text-[8px] text-foreground/30">
-                <span>REF // VPF-908</span>
-                <span className="text-emerald-500 mt-1 uppercase font-semibold">Active Search</span>
+                <span>MANDATE // VPF-908</span>
+                <span className="text-emerald-500 mt-1 uppercase font-semibold">SECURITY // CLASS-A</span>
               </div>
             </div>
 
             {/* Middle Row: Content and Grid Details */}
             <div className="relative z-10 my-8 flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
-              <div>
+              <div className="max-w-xl">
                 <span className="text-xs font-mono text-foreground/45 uppercase tracking-widest block mb-2">Series C Fintech</span>
                 <h3 className="font-clash text-4xl font-medium text-foreground tracking-tight">
-                  VP of Finance & Operations
+                  VP of Finance & Institutional Operations
                 </h3>
-                <div className="flex items-center gap-3 text-sm text-foreground/50 font-light mt-4">
+                <p className="text-foreground/75 text-sm font-normal mt-4 leading-relaxed">
+                  Steering capital efficiency, treasury compliance, and scaling transaction infrastructure.
+                </p>
+
+                {/* Capabilities List */}
+                <div className="mt-6 flex flex-wrap gap-2">
+                  {["Treasury Risk Mitigation", "Debt Facility Optimization", "Fintech Regulatory Auditing", "Liquidity Stress Testing"].map((signal) => (
+                    <span key={signal} className="px-2.5 py-1 rounded bg-foreground/[0.03] dark:bg-white/[0.03] border border-foreground/5 dark:border-white/5 font-mono text-[9px] text-foreground/60 uppercase">
+                      {signal}
+                    </span>
+                  ))}
+                </div>
+
+                {/* Impact Statement */}
+                <p className="text-[11px] text-foreground/55 border-l border-emerald-500/30 pl-3 italic mt-4">
+                  "During sudden funding contractions, they preserve institutional capital runway and structure alternative credit facilities."
+                </p>
+
+                <div className="flex items-center gap-3 text-sm text-foreground/50 font-light mt-6">
                   <MapPin className="w-4 h-4 text-foreground/35" />
                   New York, NY (Hybrid)
                 </div>
@@ -102,23 +120,38 @@ export default function LiveOpportunities() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
-            className="group relative lg:col-span-4 rounded-[2rem] border border-foreground/5 dark:border-white/5 bg-gradient-to-br from-foreground/[0.02] via-foreground/[0.005] to-transparent dark:from-white/[0.02] dark:via-white/[0.005] dark:to-transparent overflow-hidden backdrop-blur-3xl shadow-xl p-10 cursor-pointer flex flex-col justify-between min-h-[450px]"
+            className="group relative lg:col-span-4 rounded-[2rem] border border-foreground/5 dark:border-white/5 bg-gradient-to-br from-foreground/[0.02] via-foreground/[0.005] to-transparent dark:from-white/[0.02] dark:via-white/[0.005] dark:to-transparent overflow-hidden backdrop-blur-3xl shadow-xl p-10 cursor-pointer flex flex-col justify-between min-h-[500px]"
           >
             <div className="flex justify-between items-start relative z-10 w-full">
               <span className="px-3 py-1 rounded-full border border-foreground/5 bg-foreground/[0.03] text-[9px] font-mono text-foreground/50 tracking-widest uppercase">
                 London, UK (On-site)
               </span>
-              <span className="font-mono text-[8px] text-foreground/30">REF // PEA-087</span>
+              <div className="flex flex-col items-end text-right font-mono text-[8px] text-foreground/30">
+                <span>MANDATE // PEA-087</span>
+                <span className="text-foreground/45 mt-0.5">SECURITY // CLASS-B</span>
+              </div>
             </div>
 
             <div className="relative z-10 my-8">
               <span className="text-[10px] font-mono text-foreground/45 uppercase tracking-widest block mb-2">Top Tier Mega-Fund</span>
               <h3 className="font-clash text-2xl font-medium text-foreground tracking-tight">
-                Private Equity Associate
+                Private Equity Deal Associate
               </h3>
-              <p className="text-foreground/50 text-xs font-light mt-4 leading-relaxed">
-                Direct deal execution, financial modeling, portfolio monitoring, and investment thesis compilation.
+              <p className="text-foreground/75 text-xs font-normal mt-3 leading-relaxed">
+                Underwriting leveraged buyouts, deal origination, and portfolio management.
               </p>
+              
+              {/* Capabilities & Impact */}
+              <div className="mt-4 flex flex-col gap-3">
+                <div className="flex flex-col gap-1 font-mono text-[8px] text-foreground/50">
+                  <span>• LBO Sensitivity Modeling</span>
+                  <span>• Commercial Due Diligence</span>
+                  <span>• Post-Merger Capital Strategy</span>
+                </div>
+                <p className="text-[10px] text-foreground/50 border-l border-emerald-500/30 pl-2.5 italic">
+                  "Within hyper-condensed deal windows, they stress-test target operations, isolate cash flow risks, and secure board investment approval."
+                </p>
+              </div>
             </div>
 
             <div className="relative z-10 flex justify-between items-end border-t border-foreground/5 dark:border-white/5 pt-6">
@@ -138,23 +171,38 @@ export default function LiveOpportunities() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-            className="group relative lg:col-span-4 rounded-[2rem] border border-foreground/5 dark:border-white/5 bg-gradient-to-br from-foreground/[0.02] via-foreground/[0.005] to-transparent dark:from-white/[0.02] dark:via-white/[0.005] dark:to-transparent overflow-hidden backdrop-blur-3xl shadow-xl p-10 cursor-pointer flex flex-col justify-between min-h-[450px]"
+            className="group relative lg:col-span-4 rounded-[2rem] border border-foreground/5 dark:border-white/5 bg-gradient-to-br from-foreground/[0.02] via-foreground/[0.005] to-transparent dark:from-white/[0.02] dark:via-white/[0.005] dark:to-transparent overflow-hidden backdrop-blur-3xl shadow-xl p-10 cursor-pointer flex flex-col justify-between min-h-[500px]"
           >
             <div className="flex justify-between items-start relative z-10 w-full">
               <span className="px-3 py-1 rounded-full border border-foreground/5 bg-foreground/[0.03] text-[9px] font-mono text-foreground/50 tracking-widest uppercase">
                 Remote (US)
               </span>
-              <span className="font-mono text-[8px] text-foreground/30">REF // CFO-112</span>
+              <div className="flex flex-col items-end text-right font-mono text-[8px] text-foreground/30">
+                <span>MANDATE // CFO-112</span>
+                <span className="text-emerald-500 mt-0.5 uppercase font-semibold">SECURITY // CLASS-A</span>
+              </div>
             </div>
 
             <div className="relative z-10 my-8">
               <span className="text-[10px] font-mono text-foreground/45 uppercase tracking-widest block mb-2">Pre-IPO SaaS</span>
               <h3 className="font-clash text-2xl font-medium text-foreground tracking-tight">
-                Strategic Portfolio CFO
+                Strategic Enterprise CFO
               </h3>
-              <p className="text-foreground/50 text-xs font-light mt-4 leading-relaxed">
-                Fundraising, strategic modeling, business planning, and board-level reporting.
+              <p className="text-foreground/75 text-xs font-normal mt-3 leading-relaxed">
+                Directing pre-IPO capital structures, capital allocation, and investor syndicate coordination.
               </p>
+
+              {/* Capabilities & Impact */}
+              <div className="mt-4 flex flex-col gap-3">
+                <div className="flex flex-col gap-1 font-mono text-[8px] text-foreground/50">
+                  <span>• Pre-IPO Capital Restructuring</span>
+                  <span>• Investor Syndicate Alignment</span>
+                  <span>• Strategic Margin Expansion</span>
+                </div>
+                <p className="text-[10px] text-foreground/50 border-l border-emerald-500/30 pl-2.5 italic">
+                  "Under rigorous public market auditing, they build institutional-grade compliance structures and defend high-premium exit valuations."
+                </p>
+              </div>
             </div>
 
             <div className="relative z-10 flex justify-between items-end border-t border-foreground/5 dark:border-white/5 pt-6">

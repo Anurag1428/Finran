@@ -63,34 +63,48 @@ export default function WhoWeHire() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           
           {/* Card 1: Investment Bankers (Dominant/Heroic - 8 Columns) */}
-          <ArchitecturalCard className="lg:col-span-8 min-h-[500px]">
+          <ArchitecturalCard className="lg:col-span-8 min-h-[550px]">
             <div className="flex flex-col justify-between h-full gap-12">
               <div className="flex flex-col md:flex-row justify-between items-start gap-6">
                 <div>
                   <span className="text-[9px] font-mono text-blue-600 dark:text-blue-400 tracking-[0.25em] uppercase">
-                    M&A / CAPITAL MARKETS
+                    CAPITAL MARKETS // M&A EXECUTION
                   </span>
                   <h3 className="font-clash text-3xl md:text-4xl font-medium text-foreground mt-3 tracking-tight">
-                    Investment Bankers
+                    M&A Execution Directors
                   </h3>
-                  <p className="text-foreground/60 text-base font-light leading-relaxed mt-4 max-w-md">
-                    Director and Associate-level leaders with deep expertise in capital allocation, LBO structuring, and complex deal lifecycle execution.
+                  <p className="text-foreground/75 text-sm font-normal mt-4 max-w-xl leading-relaxed">
+                    Architects of capital restructuring and transactional origination.
                   </p>
+                  
+                  {/* Operational Capabilities & Impact */}
+                  <div className="mt-6 flex flex-col gap-3">
+                    <div className="flex flex-wrap gap-2">
+                      {["Syndicated Debt Placement", "LBO Capital Modeling", "Cross-Border Deal Origination", "Regulatory Compliance Vetting"].map((signal) => (
+                        <span key={signal} className="px-2.5 py-1 rounded bg-foreground/[0.03] dark:bg-white/[0.03] border border-foreground/5 dark:border-white/5 font-mono text-[9px] text-foreground/60 uppercase">
+                          {signal}
+                        </span>
+                      ))}
+                    </div>
+                    <p className="text-[11px] text-foreground/55 border-l border-emerald-500/30 pl-3 italic mt-2 max-w-xl">
+                      "Under high pressure, they stabilize balance sheets, defend deal valuations, and ensure flawless transaction execution during market disruptions."
+                    </p>
+                  </div>
                 </div>
 
                 {/* Micro Metadata Annotation */}
                 <div className="flex flex-col items-end text-right font-mono text-[9px] text-foreground/40 self-end md:self-start">
-                  <span>REF // M&A-CLASS-8</span>
-                  <span className="text-emerald-600 dark:text-emerald-400 mt-1 uppercase font-semibold">Active Pipeline</span>
+                  <span>MANDATE // RE-904</span>
+                  <span className="text-emerald-600 dark:text-emerald-400 mt-1 uppercase font-semibold">ASSIGNED</span>
                 </div>
               </div>
 
               {/* Deal Flow Visualizer Surface */}
-              <div className="relative w-full h-44 rounded-2xl bg-foreground/[0.015] dark:bg-black/30 border border-foreground/5 dark:border-white/5 p-6 overflow-hidden flex flex-col justify-between shadow-inner">
+              <div className="relative w-full h-36 rounded-2xl bg-foreground/[0.015] dark:bg-black/30 border border-foreground/5 dark:border-white/5 p-6 overflow-hidden flex flex-col justify-between shadow-inner">
                 <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/[0.03] to-transparent pointer-events-none" />
                 
                 {/* Horizontal Line-Art Flow */}
-                <div className="flex justify-between items-center w-full relative z-10 pt-4 px-4">
+                <div className="flex justify-between items-center w-full relative z-10 pt-2 px-4">
                   <div className="flex flex-col items-center gap-2">
                     <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 ring-4 ring-emerald-500/20" />
                     <span className="font-mono text-[8px] text-foreground/45 uppercase tracking-wider">Origination</span>
@@ -112,7 +126,7 @@ export default function WhoWeHire() {
                   </div>
                 </div>
 
-                <div className="flex justify-between items-end border-t border-foreground/5 dark:border-white/5 pt-4 font-mono text-[9px] text-foreground/40">
+                <div className="flex justify-between items-end border-t border-foreground/5 dark:border-white/5 pt-3 font-mono text-[9px] text-foreground/40">
                   <div className="flex gap-4">
                     <span>SECTOR: MID-MARKET</span>
                     <span>TICKET SIZE: $100M - $1B</span>
@@ -124,23 +138,35 @@ export default function WhoWeHire() {
           </ArchitecturalCard>
 
           {/* Card 2: Chartered Accountants (Secondary - 4 Columns) */}
-          <ArchitecturalCard className="lg:col-span-4 min-h-[500px]">
-            <div className="flex flex-col justify-between h-full gap-10">
+          <ArchitecturalCard className="lg:col-span-4 min-h-[550px]">
+            <div className="flex flex-col justify-between h-full gap-8">
               <div>
                 <span className="text-[9px] font-mono text-emerald-600 dark:text-emerald-400 tracking-[0.25em] uppercase">
-                  AUDIT / COMPLIANCE
+                  FINANCIAL DILIGENCE // AUDIT CONTROL
                 </span>
                 <h3 className="font-clash text-3xl font-medium text-foreground mt-3 tracking-tight">
-                  Chartered Accountants
+                  Regulatory Controllers
                 </h3>
-                <p className="text-foreground/60 text-sm font-light leading-relaxed mt-4">
-                  Rigorous corporate controllers and finance chiefs carrying prestigious credentials with big-four experience.
+                <p className="text-foreground/75 text-sm font-normal mt-4 leading-relaxed">
+                  Guarantors of balance sheet integrity and post-transaction governance.
                 </p>
+
+                {/* Operational Capabilities & Impact */}
+                <div className="mt-6 flex flex-col gap-3">
+                  <div className="flex flex-col gap-1.5 font-mono text-[9px] text-foreground/60">
+                    <span className="block">• SEC Compliance Architecture</span>
+                    <span className="block">• Forensic Audit Diligence</span>
+                    <span className="block">• Tax Optimization Modeling</span>
+                  </div>
+                  <p className="text-[11px] text-foreground/55 border-l border-emerald-500/30 pl-3 italic mt-2">
+                    "Under regulatory scrutiny, they fortify internal controls, identify capital leaks, and secure institutional confidence."
+                  </p>
+                </div>
               </div>
 
               {/* Status Ledger Panel */}
-              <div className="relative flex flex-col gap-4 p-6 rounded-2xl bg-foreground/[0.015] dark:bg-black/30 border border-foreground/5 dark:border-white/5 font-mono text-[10px] shadow-inner">
-                <div className="flex justify-between text-foreground/30 border-b border-foreground/5 dark:border-white/5 pb-3">
+              <div className="relative flex flex-col gap-3 p-6 rounded-2xl bg-foreground/[0.015] dark:bg-black/30 border border-foreground/5 dark:border-white/5 font-mono text-[10px] shadow-inner">
+                <div className="flex justify-between text-foreground/30 border-b border-foreground/5 dark:border-white/5 pb-2">
                   <span className="tracking-widest">VETTING STEP</span>
                   <span className="tracking-widest">METRIC</span>
                 </div>
@@ -167,18 +193,30 @@ export default function WhoWeHire() {
           </ArchitecturalCard>
 
           {/* Card 3: Portfolio CFOs (Supporting - 4 Columns) */}
-          <ArchitecturalCard className="lg:col-span-4 min-h-[500px]">
-            <div className="flex flex-col justify-between h-full gap-10">
+          <ArchitecturalCard className="lg:col-span-4 min-h-[550px]">
+            <div className="flex flex-col justify-between h-full gap-8">
               <div>
                 <span className="text-[9px] font-mono text-emerald-600 dark:text-emerald-400 tracking-[0.25em] uppercase">
-                  STRATEGY / PE OPS
+                  PE OPERATIONS // ENTERPRISE SCALE
                 </span>
                 <h3 className="font-clash text-3xl font-medium text-foreground mt-3 tracking-tight">
                   Portfolio CFOs
                 </h3>
-                <p className="text-foreground/60 text-sm font-light leading-relaxed mt-4">
-                  Financial leaders with proven experience scaling high-growth startups and restructuring Private Equity portfolio companies.
+                <p className="text-foreground/75 text-sm font-normal mt-4 leading-relaxed">
+                  Translating Private Equity investment theses into operational cash flow.
                 </p>
+
+                {/* Operational Capabilities & Impact */}
+                <div className="mt-6 flex flex-col gap-3">
+                  <div className="flex flex-col gap-1.5 font-mono text-[9px] text-foreground/60">
+                    <span className="block">• Working Capital Optimization</span>
+                    <span className="block">• ERP System Consolidation</span>
+                    <span className="block">• Post-Acquisition Integration</span>
+                  </div>
+                  <p className="text-[11px] text-foreground/55 border-l border-emerald-500/30 pl-3 italic mt-2">
+                    "During rapid scaling, they maintain liquidity thresholds, optimize operating margins, and prepare assets for capital events."
+                  </p>
+                </div>
               </div>
 
               {/* Concentric Circle radar graphic */}
@@ -200,24 +238,38 @@ export default function WhoWeHire() {
           </ArchitecturalCard>
 
           {/* Card 4: PE & VC Associates (Secondary - 8 Columns) */}
-          <ArchitecturalCard className="lg:col-span-8 min-h-[500px]">
+          <ArchitecturalCard className="lg:col-span-8 min-h-[550px]">
             <div className="flex flex-col justify-between h-full gap-12">
               <div className="flex flex-col md:flex-row justify-between items-start gap-6">
                 <div>
                   <span className="text-[9px] font-mono text-blue-600 dark:text-blue-400 tracking-[0.25em] uppercase">
-                    DUE DILIGENCE / DEALS
+                    INVESTMENT UNDERWRITING // DILIGENCE
                   </span>
                   <h3 className="font-clash text-3xl md:text-4xl font-medium text-foreground mt-3 tracking-tight">
                     PE & VC Associates
                   </h3>
-                  <p className="text-foreground/60 text-base font-light leading-relaxed mt-4 max-w-md">
-                    Analytic leaders skilled in valuation, building complex financial models, managing data rooms, and underwriting investment theses.
+                  <p className="text-foreground/75 text-sm font-normal mt-4 max-w-xl leading-relaxed">
+                    Engineers of financial underwriting and market mapping intelligence.
                   </p>
+
+                  {/* Operational Capabilities & Impact */}
+                  <div className="mt-6 flex flex-col gap-3">
+                    <div className="flex flex-wrap gap-2">
+                      {["Three-Statement Modeling", "Leveraged Buyout Analytics", "Market Intelligence Synthesis"].map((signal) => (
+                        <span key={signal} className="px-2.5 py-1 rounded bg-foreground/[0.03] dark:bg-white/[0.03] border border-foreground/5 dark:border-white/5 font-mono text-[9px] text-foreground/60 uppercase">
+                          {signal}
+                        </span>
+                      ))}
+                    </div>
+                    <p className="text-[11px] text-foreground/55 border-l border-emerald-500/30 pl-3 italic mt-2 max-w-xl">
+                      "Within short deal windows, they deliver precise risk-return models, stress-test targets under macro headwinds, and draft the investment memo."
+                    </p>
+                  </div>
                 </div>
                 
                 <div className="flex flex-col items-end text-right font-mono text-[9px] text-foreground/40 self-end md:self-start">
-                  <span>ANALYSIS METRIC</span>
-                  <span className="text-blue-600 dark:text-blue-400 mt-1 uppercase font-semibold">Tier-1 Associates</span>
+                  <span>MANDATE // PEA-087</span>
+                  <span className="text-blue-600 dark:text-blue-400 mt-1 uppercase font-semibold">CONFIRMED</span>
                 </div>
               </div>
 
