@@ -1,86 +1,118 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Quote } from "lucide-react";
+import { ShieldCheck } from "lucide-react";
 
 export default function Testimonials() {
-  const testimonials = [
-    {
-      quote: "Finroles completely changed how we hire for our portfolio companies. We placed three CFOs in under a month, each perfectly mapped to our growth thesis.",
-      author: "Sarah Jenkins",
-      role: "Managing Partner, Alpine Ventures"
-    },
-    {
-      quote: "The quality of the candidate pipeline is unmatched. Every profile was deeply vetted and technically flawless. We bypassed months of traditional search.",
-      author: "David Chen",
-      role: "VP Finance, NexaPay"
-    }
-  ];
-
   return (
-    <section id="testimonials" className="py-32 relative">
-      <div 
-        className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(16,185,129,0.1)_0%,transparent_50%)] pointer-events-none" 
-        style={{ mixBlendMode: 'var(--mesh-blend)' as any }}
-      />
+    <section id="testimonials" className="py-40 relative overflow-hidden">
       
-      <div className="max-w-[1400px] mx-auto px-6 md:px-16 flex flex-col items-center">
-        
-        <div className="text-center mb-24 relative z-10">
-          <span className="text-[10px] font-mono text-emerald-500 dark:text-emerald-400 tracking-widest uppercase drop-shadow-sm dark:drop-shadow-md">The Network</span>
-          <h2 className="font-clash text-4xl sm:text-5xl font-medium text-foreground mt-4 tracking-tight drop-shadow-sm dark:drop-shadow-xl">
-            Trusted by the Best.
-          </h2>
-        </div>
+      {/* Restrained Cinematic Atmosphere */}
+      <div 
+        className="absolute top-1/2 left-1/4 w-[600px] h-[600px] bg-emerald-500/[0.015] dark:bg-emerald-500/[0.02] rounded-full blur-[150px] -translate-y-1/2 pointer-events-none" 
+      />
 
-        <div className="relative w-full max-w-3xl" style={{ perspective: "1000px" }}>
+      <div className="max-w-[1300px] mx-auto px-6 md:px-12 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-20 items-center">
           
-          {/* Back Card (Blurred) */}
-          <motion.div 
-            initial={{ opacity: 0, y: -20, scale: 0.9 }}
-            whileInView={{ opacity: 0.5, y: -20, scale: 0.9 }}
-            viewport={{ once: true }}
-            className="absolute inset-x-0 top-0 mx-auto w-[90%] glass rounded-3xl border border-transparent dark:border-white/5 p-10 bg-white/40 dark:bg-slate-900/30 blur-[2px] z-0 h-full flex flex-col justify-between shadow-lg"
-          >
-            <Quote className="w-8 h-8 text-foreground/20 dark:text-white/20 mb-6" />
-            <p className="text-xl text-foreground/40 dark:text-white/30 font-light leading-relaxed mb-8">
-              "{testimonials[1].quote}"
+          {/* Left Column: Restrained Strategic Positioning */}
+          <div className="lg:col-span-5 flex flex-col items-start text-left">
+            <span className="text-[9px] font-mono text-foreground/40 tracking-[0.25em] uppercase border-b border-foreground/10 pb-2 mb-8">
+              Institutional Network
+            </span>
+            <h2 className="font-clash text-4xl md:text-5xl font-medium leading-[1.1] text-foreground tracking-tight">
+              Embedded<br />
+              Inside<br />
+              High-<br />
+              Performance<br />
+              Finance Teams.
+            </h2>
+            <p className="text-foreground/50 text-sm font-light leading-relaxed mt-8 max-w-sm">
+              Finroles operates as the institutional talent infrastructure for private capital, strategic finance, and board-level execution. We deliver vetted operators precision-mapped to your capital strategy and thesis.
             </p>
-            <div>
-              <p className="text-sm font-medium text-foreground/60 dark:text-white/40">{testimonials[1].author}</p>
-              <p className="text-xs text-foreground/40 dark:text-white/20 font-mono uppercase tracking-widest mt-1">{testimonials[1].role}</p>
-            </div>
-          </motion.div>
+          </div>
 
-          {/* Front Card (Focused) */}
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="relative z-10 w-full glass-premium rounded-3xl border border-transparent dark:border-white/10 p-10 md:p-14 bg-white/80 dark:bg-black/80 shadow-[0_16px_40px_rgba(0,0,0,0.06)] dark:shadow-2xl mt-8"
-          >
-            <div className="absolute top-0 right-0 p-8 font-mono text-[9px] text-foreground/45">
-              <span>REFERENCE.ID // VET-029</span>
-            </div>
-
-            <Quote className="w-10 h-10 text-emerald-500/40 dark:text-emerald-500/50 mb-8" />
+          {/* Right Column: Restrained Document Stack */}
+          <div className="lg:col-span-7 relative h-[600px] flex items-center justify-center lg:justify-end">
             
-            <p className="text-2xl md:text-3xl text-foreground font-light leading-snug mb-12 max-w-2xl">
-              "{testimonials[0].quote}"
-            </p>
-            
-            <div className="flex items-center gap-4 border-t border-foreground/10 dark:border-white/10 pt-8">
-              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-emerald-500 p-[1px]">
-                <div className="w-full h-full bg-background rounded-full" />
-              </div>
-              <div>
-                <p className="text-base font-medium text-foreground">{testimonials[0].author}</p>
-                <p className="text-xs text-foreground/50 font-mono uppercase tracking-widest mt-1">{testimonials[0].role}</p>
-              </div>
-            </div>
-          </motion.div>
+            {/* Soft Background Layer 1 */}
+            <motion.div 
+              initial={{ opacity: 0, rotateZ: -2, y: 10 }}
+              whileInView={{ opacity: 1, rotateZ: -1.5, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1.2, ease: "easeOut" }}
+              className="absolute w-[95%] max-w-[560px] h-[480px] rounded-[1.5rem] border border-foreground/5 bg-foreground/[0.01] backdrop-blur-sm -translate-x-8 translate-y-6 z-0"
+            />
 
+            {/* Soft Background Layer 2 */}
+            <motion.div 
+              initial={{ opacity: 0, rotateZ: 2, y: -10 }}
+              whileInView={{ opacity: 1, rotateZ: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1.2, delay: 0.1, ease: "easeOut" }}
+              className="absolute w-[95%] max-w-[560px] h-[480px] rounded-[1.5rem] border border-foreground/5 bg-foreground/[0.015] backdrop-blur-md translate-x-2 -translate-y-2 z-10"
+            />
+
+            {/* Primary Case-Study Artifact */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
+              className="relative w-full max-w-[580px] rounded-[1.5rem] border border-foreground/[0.08] dark:border-white/[0.08] bg-background/90 dark:bg-[#0a0a0a]/95 backdrop-blur-xl shadow-xl p-10 z-20 flex flex-col justify-between min-h-[480px]"
+            >
+
+              <div className="flex justify-between items-start border-b border-foreground/5 dark:border-white/5 pb-5">
+                <div className="flex items-center gap-2">
+                  <ShieldCheck className="w-4 h-4 text-emerald-600/80 dark:text-emerald-500/80" />
+                  <span className="font-mono text-[9px] uppercase tracking-[0.2em] text-foreground/40">Case Study Artifact</span>
+                </div>
+                <div className="flex flex-col text-right font-mono text-[8px] text-foreground/40">
+                  <span>REFERENCE ID // AL-994</span>
+                  <span className="text-emerald-600/80 dark:text-emerald-500/80 uppercase mt-0.5">Verified Network</span>
+                </div>
+              </div>
+
+              <div className="py-8">
+                <p className="font-satoshi text-xl md:text-2xl text-foreground/90 font-light leading-relaxed tracking-tight">
+                  "Finroles became an extension of our operating team. Every candidate arrived calibrated to our investment structure, reporting complexity, and execution velocity."
+                </p>
+              </div>
+
+              {/* Institutional Metadata Grid */}
+              <div className="grid grid-cols-2 gap-x-8 gap-y-6 pt-6 border-t border-foreground/5 dark:border-white/5 font-mono text-[9px]">
+                <div>
+                  <span className="block text-foreground/30 tracking-[0.2em] uppercase mb-1">PLACEMENTS</span>
+                  <span className="block text-foreground/75 text-[10px]">03 Portfolio CFOs</span>
+                </div>
+                <div>
+                  <span className="block text-foreground/30 tracking-[0.2em] uppercase mb-1">SEARCH WINDOW</span>
+                  <span className="block text-foreground/75 text-[10px]">21 Days</span>
+                </div>
+                <div>
+                  <span className="block text-foreground/30 tracking-[0.2em] uppercase mb-1">SECTOR</span>
+                  <span className="block text-foreground/75 text-[10px]">Fintech / Growth Equity</span>
+                </div>
+                <div>
+                  <span className="block text-foreground/30 tracking-[0.2em] uppercase mb-1">MANDATE TYPE</span>
+                  <span className="block text-emerald-600/80 dark:text-emerald-500/80 text-[10px]">RETAINED</span>
+                </div>
+              </div>
+
+              {/* Author Plate */}
+              <div className="mt-8 flex items-center gap-4">
+                <div className="w-8 h-8 rounded-full border border-foreground/10 flex items-center justify-center bg-foreground/[0.01]">
+                  <span className="font-mono text-[9px] text-foreground/40">SJ</span>
+                </div>
+                <div>
+                  <p className="text-xs font-medium text-foreground tracking-tight">Sarah Jenkins</p>
+                  <p className="text-[9px] text-foreground/40 font-mono uppercase tracking-widest mt-0.5">Managing Partner, Alpine Ventures</p>
+                </div>
+              </div>
+
+            </motion.div>
+
+          </div>
         </div>
       </div>
     </section>

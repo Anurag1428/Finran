@@ -71,10 +71,10 @@ export default function WhoWeHire() {
                     CAPITAL MARKETS // M&A EXECUTION
                   </span>
                   <h3 className="font-clash text-3xl md:text-4xl font-medium text-foreground mt-3 tracking-tight">
-                    M&A Execution Directors
+                    M&A Directors (MBA/CFA)
                   </h3>
                   <p className="text-foreground/75 text-sm font-normal mt-4 max-w-xl leading-relaxed">
-                    Architects of capital restructuring and transactional origination.
+                    Architects of capital restructuring and transactional origination, backed by elite MBA degrees and CFA charters.
                   </p>
                   
                   {/* Operational Capabilities & Impact */}
@@ -145,10 +145,10 @@ export default function WhoWeHire() {
                   FINANCIAL DILIGENCE // AUDIT CONTROL
                 </span>
                 <h3 className="font-clash text-3xl font-medium text-foreground mt-3 tracking-tight">
-                  Regulatory Controllers
+                  Regulatory Controllers (CA/CS)
                 </h3>
                 <p className="text-foreground/75 text-sm font-normal mt-4 leading-relaxed">
-                  Guarantors of balance sheet integrity and post-transaction governance.
+                  Guarantors of balance sheet integrity and post-transaction governance, led by elite Chartered Accountants and Company Secretaries.
                 </p>
 
                 {/* Operational Capabilities & Impact */}
@@ -200,10 +200,10 @@ export default function WhoWeHire() {
                   PE OPERATIONS // ENTERPRISE SCALE
                 </span>
                 <h3 className="font-clash text-3xl font-medium text-foreground mt-3 tracking-tight">
-                  Portfolio CFOs
+                  Portfolio CFOs (CMA/CS)
                 </h3>
                 <p className="text-foreground/75 text-sm font-normal mt-4 leading-relaxed">
-                  Translating Private Equity investment theses into operational cash flow.
+                  Translating Private Equity investment theses into operational cash flow, driven by elite Cost and Management Accountants (CMAs) and Company Secretaries.
                 </p>
 
                 {/* Operational Capabilities & Impact */}
@@ -246,10 +246,10 @@ export default function WhoWeHire() {
                     INVESTMENT UNDERWRITING // DILIGENCE
                   </span>
                   <h3 className="font-clash text-3xl md:text-4xl font-medium text-foreground mt-3 tracking-tight">
-                    PE & VC Associates
+                    PE & VC Associates (CFA)
                   </h3>
                   <p className="text-foreground/75 text-sm font-normal mt-4 max-w-xl leading-relaxed">
-                    Engineers of financial underwriting and market mapping intelligence.
+                    Engineers of financial underwriting, populated by top-tier graduates from esteemed institutions and CFA charterholders.
                   </p>
 
                   {/* Operational Capabilities & Impact */}
